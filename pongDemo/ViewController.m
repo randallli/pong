@@ -15,6 +15,9 @@
 @property (nonatomic, strong) UIImageView * ball;
 @property (nonatomic) CGPoint velocity;
 
+@property (nonatomic, strong) UIImageView * player1Paddle;
+@property (nonatomic, strong) UIImageView * player2Paddle;
+
 @end
 
 @implementation ViewController
@@ -34,6 +37,16 @@
     [self.view addSubview:self.ball];
 
     self.velocity = CGPointMake(0, 30);
+    
+    self.player1Paddle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"paddle"]];
+    self.player1Paddle.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.player1Paddle.frame));
+    
+    self.player2Paddle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"paddle"]];
+    self.player2Paddle.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMaxY(self.view.bounds) - CGRectGetMidY(self.player2Paddle.frame));
+    
+    [self.view addSubview:self.player1Paddle];
+    [self.view addSubview:self.player2Paddle];
+
 
 }
 
@@ -50,7 +63,7 @@
         delta = 0;
     }
     self.timestamp = displayLink.timestamp;
-    NSLog(@"loggin update with delta: %f",delta);
+    //NSLog(@"loggin update with delta: %f",delta);
 
     CGPoint newPosition = self.ball.center;
     newPosition.x = self.ball.center.x + delta * self.velocity.x;
