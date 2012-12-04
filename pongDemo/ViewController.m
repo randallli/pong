@@ -19,6 +19,9 @@
 @property (nonatomic, strong) UIImageView * player1Paddle;
 @property (nonatomic, strong) UIImageView * player2Paddle;
 
+@property (nonatomic, strong) UITouch * player1Touch;
+@property (nonatomic, strong) UITouch * player2Touch;
+
 @end
 
 @implementation ViewController
@@ -121,6 +124,56 @@
         direction = CGPointNormalize(direction);
         self.velocity = CGPointScale(direction, speed);
     }
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    for (UITouch * touch in touches) {
+        CGPoint location = [touch locationInView:self.view];
+        if(location.y < CGRectGetMidY(self.view.bounds))
+        {
+            self.player1Touch = touch;
+            self.player1Paddle.center = CGPointMake(location.x, self.player1Paddle.center.y);
+        }
+        else
+        {
+            self.player2Touch = touch;
+            self.player2Paddle.center = CGPointMake(location.x, self.player2Paddle.center.y);
+        }
+    }
+    
+}
+
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    for (UITouch * touch in touches) {
+        CGPoint location = [touch locationInView:self.view];
+        if(location.y < CGRectGetMidY(self.view.bounds))
+        {
+            if([self.player1Touch isEqual:touch])
+            {
+                self.player1Paddle.center = CGPointMake(location.x, self.player1Paddle.center.y);
+            }
+        }
+        else
+        {
+            if([self.player2Touch isEqual:touch])
+            {
+                self.player2Paddle.center = CGPointMake(location.x, self.player2Paddle.center.y);
+            }
+        }
+    }
+    
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
 }
 
 
