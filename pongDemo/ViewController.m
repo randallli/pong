@@ -42,6 +42,10 @@
 
 - (void) update:(CADisplayLink*)displayLink {
     CFTimeInterval delta = displayLink.timestamp - self.timestamp;
+    if(self.timestamp <=0)
+    {
+        delta = 0;
+    }
     self.timestamp = displayLink.timestamp;
     NSLog(@"loggin update with delta: %f",delta);
 
