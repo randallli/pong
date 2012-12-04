@@ -10,6 +10,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import "BPGeometry.h"
 
+#define kVelocity 70
+#define kAcceleration 30
+
 @interface ViewController ()
 @property (nonatomic) CFTimeInterval timestamp;
 
@@ -113,11 +116,11 @@
 {
     if(player1Serves)
     {
-        self.velocity = CGPointMake(0, 30);
+        self.velocity = CGPointMake(0, kVelocity);
     }
     else
     {
-        self.velocity = CGPointMake(0, -30);
+        self.velocity = CGPointMake(0, -kVelocity);
     }
     self.ball.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.view.bounds));
     
@@ -129,7 +132,7 @@
     {
         //player hit ball
         CGFloat speed = CGPointMagnitude(self.velocity);
-        speed += 15;
+        speed += kAcceleration;
         CGPoint direction = CGPointSubtract(self.ball.center, paddle.center);
         direction = CGPointNormalize(direction);
         self.velocity = CGPointScale(direction, speed);
