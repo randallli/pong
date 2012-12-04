@@ -90,6 +90,16 @@
         [self bounceOffPaddle:self.player2Paddle];
     }
 
+    //right left sides
+    if(CGRectGetMinX(self.ball.frame) < CGRectGetMinX(self.view.bounds))
+    {
+        self.velocity = CGPointMake(abs(self.velocity.x), self.velocity.y);
+    }
+    if(CGRectGetMaxX(self.ball.frame) > CGRectGetMaxX(self.view.bounds))
+    {
+        self.velocity = CGPointMake(-abs(self.velocity.x), self.velocity.y);
+    }
+
     
     CGPoint newPosition = self.ball.center;
     newPosition.x = self.ball.center.x + delta * self.velocity.x;
