@@ -65,12 +65,46 @@
     self.timestamp = displayLink.timestamp;
     //NSLog(@"loggin update with delta: %f",delta);
 
+    if(self.ball.center.y < CGRectGetMidY(self.view.bounds))
+    {
+        //upper half
+        if(CGRectGetMinY(self.ball.frame) < CGRectGetMinY(self.view.bounds))
+        {
+            //you lose
+            [self resetRoundWithPlayer1ToServe:YES];
+        }
+    }
+    else
+    {
+        //lower half
+        if(CGRectGetMaxY(self.ball.frame) > CGRectGetMaxY(self.view.bounds))
+        {
+            //you lose
+            [self resetRoundWithPlayer1ToServe:NO];
+        }
+    }
+
+    
     CGPoint newPosition = self.ball.center;
     newPosition.x = self.ball.center.x + delta * self.velocity.x;
     newPosition.y = self.ball.center.y + delta * self.velocity.y;
     
     self.ball.center = newPosition;//CGPointMake(self.ball.center.x , y);
 
+}
+
+- (void) resetRoundWithPlayer1ToServe:(BOOL) player1Serves
+{
+    if(player1Serves)
+    {
+        self.velocity = CGPointMake(0, 30);
+    }
+    else
+    {
+        self.velocity = CGPointMake(0, -30);
+    }
+    self.ball.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.view.bounds));
+    
 }
 
 
