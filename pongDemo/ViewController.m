@@ -12,6 +12,8 @@
 @interface ViewController ()
 @property (nonatomic) CFTimeInterval timestamp;
 
+@property (nonatomic, strong) UIImageView * ball;
+
 @end
 
 @implementation ViewController
@@ -25,6 +27,11 @@
     CADisplayLink * displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(update:)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 
+    self.ball = [[UIImageView alloc] initWithImage:[UIImage imageNamed: @"ball"]];
+    self.ball.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.view.bounds));
+
+    [self.view addSubview:self.ball];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +44,7 @@
     CFTimeInterval delta = displayLink.timestamp - self.timestamp;
     self.timestamp = displayLink.timestamp;
     NSLog(@"loggin update with delta: %f",delta);
+
 }
 
 

@@ -25,6 +25,7 @@
 		20E73217166E895C001806BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E731EF166E895C001806BE /* Foundation.framework */; };
 		20E7321F166E895C001806BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20E7321D166E895C001806BE /* InfoPlist.strings */; };
 		20E73222166E895C001806BE /* pongDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E73221166E895C001806BE /* pongDemoTests.m */; };
+		20ED16FE166E9D9D00B1C696 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 20ED16FD166E9D9D00B1C696 /* ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		20E7321E166E895C001806BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20E73220166E895C001806BE /* pongDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pongDemoTests.h; sourceTree = "<group>"; };
 		20E73221166E895C001806BE /* pongDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pongDemoTests.m; sourceTree = "<group>"; };
+		20ED16FD166E9D9D00B1C696 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		20E731F3166E895C001806BE /* pongDemo */ = {
 			isa = PBXGroup;
 			children = (
+				20ED16FD166E9D9D00B1C696 /* ball.png */,
 				20E731FC166E895C001806BE /* AppDelegate.h */,
 				20E731FD166E895C001806BE /* AppDelegate.m */,
 				20E73205166E895C001806BE /* MainStoryboard_iPhone.storyboard */,
@@ -244,6 +247,7 @@
 				20E73204166E895C001806BE /* Default-568h@2x.png in Resources */,
 				20E73207166E895C001806BE /* MainStoryboard_iPhone.storyboard in Resources */,
 				20E7320A166E895C001806BE /* MainStoryboard_iPad.storyboard in Resources */,
+				20ED16FE166E9D9D00B1C696 /* ball.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
