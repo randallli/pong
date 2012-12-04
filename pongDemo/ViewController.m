@@ -13,6 +13,7 @@
 @property (nonatomic) CFTimeInterval timestamp;
 
 @property (nonatomic, strong) UIImageView * ball;
+@property (nonatomic) CGPoint velocity;
 
 @end
 
@@ -32,6 +33,8 @@
 
     [self.view addSubview:self.ball];
 
+    self.velocity = CGPointMake(0, 30);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +51,12 @@
     }
     self.timestamp = displayLink.timestamp;
     NSLog(@"loggin update with delta: %f",delta);
+
+    CGPoint newPosition = self.ball.center;
+    newPosition.x = self.ball.center.x + delta * self.velocity.x;
+    newPosition.y = self.ball.center.y + delta * self.velocity.y;
+    
+    self.ball.center = newPosition;//CGPointMake(self.ball.center.x , y);
 
 }
 
