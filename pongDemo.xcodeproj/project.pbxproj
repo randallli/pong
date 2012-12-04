@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20676B96166E99DB006A1708 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20676B95166E99DB006A1708 /* QuartzCore.framework */; };
 		20E731EE166E895C001806BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E731ED166E895C001806BE /* UIKit.framework */; };
 		20E731F0166E895C001806BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E731EF166E895C001806BE /* Foundation.framework */; };
 		20E731F2166E895C001806BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E731F1166E895C001806BE /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20676B95166E99DB006A1708 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		20E731E9166E895C001806BE /* pongDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pongDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E731ED166E895C001806BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20E731EF166E895C001806BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20676B96166E99DB006A1708 /* QuartzCore.framework in Frameworks */,
 				20E731EE166E895C001806BE /* UIKit.framework in Frameworks */,
 				20E731F0166E895C001806BE /* Foundation.framework in Frameworks */,
 				20E731F2166E895C001806BE /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +92,7 @@
 		20E731DE166E895C001806BE = {
 			isa = PBXGroup;
 			children = (
+				20676B95166E99DB006A1708 /* QuartzCore.framework */,
 				20E731F3166E895C001806BE /* pongDemo */,
 				20E7321A166E895C001806BE /* pongDemoTests */,
 				20E731EC166E895C001806BE /* Frameworks */,
@@ -461,6 +465,7 @@
 				20E73227166E895C001806BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20E73228166E895C001806BE /* Build configuration list for PBXNativeTarget "pongDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +474,7 @@
 				20E7322A166E895C001806BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
