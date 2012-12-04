@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "BPGeometry.h"
 
 @interface ViewController ()
 @property (nonatomic) CFTimeInterval timestamp;
@@ -36,7 +37,7 @@
 
     [self.view addSubview:self.ball];
 
-    self.velocity = CGPointMake(0, 30);
+    self.velocity = CGPointMake(0, 100);
     
     self.player1Paddle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"paddle"]];
     self.player1Paddle.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.player1Paddle.frame));
@@ -73,6 +74,7 @@
             //you lose
             [self resetRoundWithPlayer1ToServe:YES];
         }
+        [self bounceOffPaddle:self.player1Paddle];
     }
     else
     {
@@ -82,6 +84,7 @@
             //you lose
             [self resetRoundWithPlayer1ToServe:NO];
         }
+        [self bounceOffPaddle:self.player2Paddle];
     }
 
     
@@ -105,6 +108,19 @@
     }
     self.ball.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.view.bounds));
     
+}
+
+- (void) bounceOffPaddle:(UIImageView *) paddle
+{
+    if(CGRectIntersectsRect(self.ball.frame, paddle.frame))
+    {
+        //player hit ball
+        CGFloat speed = CGPointMagnitude(self.velocity);
+        speed += 15;
+        CGPoint direction = CGPointSubtract(self.ball.center, paddle.center);
+        direction = CGPointNormalize(direction);
+        self.velocity = CGPointScale(direction, speed);
+    }
 }
 
 

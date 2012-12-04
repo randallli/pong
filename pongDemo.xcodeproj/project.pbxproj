@@ -27,6 +27,8 @@
 		20E73222166E895C001806BE /* pongDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E73221166E895C001806BE /* pongDemoTests.m */; };
 		20ED16FE166E9D9D00B1C696 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 20ED16FD166E9D9D00B1C696 /* ball.png */; };
 		20ED1701166EA2A500B1C696 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 20ED1700166EA2A500B1C696 /* paddle.png */; };
+		20ED1704166EA4B200B1C696 /* BPGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 20ED1703166EA4B200B1C696 /* BPGeometry.m */; };
+		20ED1705166EA4CF00B1C696 /* BPGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 20ED1703166EA4B200B1C696 /* BPGeometry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		20E73221166E895C001806BE /* pongDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pongDemoTests.m; sourceTree = "<group>"; };
 		20ED16FD166E9D9D00B1C696 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		20ED1700166EA2A500B1C696 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		20ED1702166EA4B200B1C696 /* BPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPGeometry.h; sourceTree = "<group>"; };
+		20ED1703166EA4B200B1C696 /* BPGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPGeometry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				20E731FD166E895C001806BE /* AppDelegate.m */,
 				20E73205166E895C001806BE /* MainStoryboard_iPhone.storyboard */,
 				20E73208166E895C001806BE /* MainStoryboard_iPad.storyboard */,
+				20ED1702166EA4B200B1C696 /* BPGeometry.h */,
+				20ED1703166EA4B200B1C696 /* BPGeometry.m */,
 				20E7320B166E895C001806BE /* ViewController.h */,
 				20E7320C166E895C001806BE /* ViewController.m */,
 				20E731F4166E895C001806BE /* Supporting Files */,
@@ -286,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20ED1705166EA4CF00B1C696 /* BPGeometry.m in Sources */,
 				20E731FA166E895C001806BE /* main.m in Sources */,
 				20E731FE166E895C001806BE /* AppDelegate.m in Sources */,
 				20E7320D166E895C001806BE /* ViewController.m in Sources */,
@@ -297,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E73222166E895C001806BE /* pongDemoTests.m in Sources */,
+				20ED1704166EA4B200B1C696 /* BPGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
