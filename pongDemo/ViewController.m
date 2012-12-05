@@ -10,7 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "BPGeometry.h"
 
-#define kVelocity 70
+#define kVelocityX 35
+#define kVelocityY 70
 #define kAcceleration 30
 
 @interface ViewController ()
@@ -43,7 +44,7 @@
 
     [self.view addSubview:self.ball];
 
-    self.velocity = CGPointMake(0, 100);
+    self.velocity = CGPointMake(kVelocityX, kVelocityY);
     
     self.player1Paddle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"paddle"]];
     self.player1Paddle.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.player1Paddle.frame));
@@ -116,11 +117,11 @@
 {
     if(player1Serves)
     {
-        self.velocity = CGPointMake(0, kVelocity);
+        self.velocity = CGPointMake(kVelocityX, kVelocityY);
     }
     else
     {
-        self.velocity = CGPointMake(0, -kVelocity);
+        self.velocity = CGPointMake(kVelocityX, -kVelocityY);
     }
     self.ball.center = CGPointMake(CGRectGetMidX(self.view.bounds),CGRectGetMidY(self.view.bounds));
     
