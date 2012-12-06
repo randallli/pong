@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		20676B95166E99DB006A1708 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		20E731E9166E895C001806BE /* pongDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pongDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E731E9166E895C001806BE /* pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E731ED166E895C001806BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20E731EF166E895C001806BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20E731F1166E895C001806BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,7 +111,7 @@
 		20E731EA166E895C001806BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20E731E9166E895C001806BE /* pongDemo.app */,
+				20E731E9166E895C001806BE /* pong.app */,
 				20E73213166E895C001806BE /* pongDemoTests.octest */,
 			);
 			name = Products;
@@ -196,7 +196,7 @@
 			);
 			name = pongDemo;
 			productName = pongDemo;
-			productReference = 20E731E9166E895C001806BE /* pongDemo.app */;
+			productReference = 20E731E9166E895C001806BE /* pong.app */;
 			productType = "com.apple.product-type.application";
 		};
 		20E73212166E895C001806BE /* pongDemoTests */ = {
@@ -412,7 +412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pongDemo/pongDemo-Prefix.pch";
 				INFOPLIST_FILE = "pongDemo/pongDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = pong;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -423,7 +423,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pongDemo/pongDemo-Prefix.pch";
 				INFOPLIST_FILE = "pongDemo/pongDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = pong;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
